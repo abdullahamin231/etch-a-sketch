@@ -6,8 +6,20 @@ function makeGrid(rows, col){
     for(c = 0; c < (rows*col); c++){
         let cell = document.createElement("div");
         cell.innerText = c + 1;
-        container.appendChild(cell).className = "grid-item";
+        cell.className = "grid-item";
+        container.appendChild(cell);
+        
     };
 };
 
-makeGrid(16,16);
+
+
+const gridItems = document.getElementsByClassName("grid-item");
+
+for (let i = 0; i < gridItems.length; i++) {
+    gridItems[i].addEventListener('mouseenter', function() {
+        gridItems[i].classList.add('hovered');
+    });
+}
+makeGrid(16, 16);
+

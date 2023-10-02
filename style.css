@@ -10,7 +10,10 @@
   }
   
   .grid-item {
-
     border: 1px solid #ddd;
     text-align: center;
+    transition: background-color 0.25s ease;
+  }
+  .hovered{
+    background-color: black;
   }
