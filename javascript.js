@@ -12,7 +12,8 @@ function makeGrid(rows, col){
         let div = document.createElement("div");
         div.innerText = c + 1;
         div.className = "gridblock";
-        div.style.border = "0.5px dashed lightblue"
+        div.style.border = "0.5px dashed lightblue";
+        div.style.color = 'white';
         div.setAttribute("id", `div${c}`);  
         container.appendChild(div);
     }; 
@@ -29,10 +30,10 @@ makeGrid(16, 16);
 grid.forEach(block => {
     block.addEventListener("mouseover", () => {
         block.style.backgroundColor = "black";
+        block.style.color = 'black';
     });
     
 });
-
 
 function resetGrid(){
     grid.forEach(element => {
@@ -44,6 +45,7 @@ function resetGrid(){
     grid.forEach(block => {
         block.addEventListener("mouseover", () => {
             block.style.backgroundColor = "black";
+            block.style.color = 'black';
         });
         
     });
