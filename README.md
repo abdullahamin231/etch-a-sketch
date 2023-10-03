@@ -1,3 +1,3 @@
 # etch-a-sketch
-just setting up
-does this work check
+Etch-a-Sketch, a TheOdinProject Assignment.
+Created with HTML, CSS, and JS.
