@@ -20,6 +20,12 @@ btnRandom.style.backgroundColor = "#333333";
 btnRandom.textContent = "Random";
 btnRandom.addEventListener("click",randomGrid);
 
+btnEraser =  document.createElement("button");
+btnEraser.setAttribute("id", "eraser");
+btnEraser.style.backgroundColor = "#333333";
+btnEraser.textContent = "Eraser";
+btnEraser.addEventListener("click",eraseGrid);
+
 setColor =  document.createElement("input");
 setColor.type = "color";
 setColor.setAttribute("id", "color");
@@ -31,7 +37,7 @@ setColor.addEventListener("input", (e) => {
 const btnCont = document.createElement("div");
 document.body.insertBefore(btnCont,container);
 btnCont.setAttribute("id", "buttonContainer");
-btnCont.appendChild(btnReset);  btnCont.appendChild(btnRandom); btnCont.appendChild(setColor);
+btnCont.appendChild(btnReset);  btnCont.appendChild(btnRandom); btnCont.appendChild(btnEraser); btnCont.appendChild(setColor); 
 
 function makeGrid(rows, col){
     for(c = 0; c < (rows*col); c++){
@@ -102,7 +108,7 @@ function randomGrid(){
     makeGrid(rowCol[0],rowCol[1]);
     grid.forEach(block => {
         block.addEventListener("mouseover", () => {
-            console.log(random_rgba);
+            
             block.style.backgroundColor = random_rgba();
         
         });
@@ -123,6 +129,7 @@ function colorGrid(){
     makeGrid(rowCol[0],rowCol[1]);
     btnReset.style.backgroundColor = setColor.value;
     btnRandom.style.backgroundColor = setColor.value;
+    btnEraser.style.backgroundColor = setColor.value;
     grid.forEach(block => {
         block.addEventListener("mouseover", () => {
             block.style.backgroundColor = setColor.value;
@@ -130,3 +137,15 @@ function colorGrid(){
         
     });
 }
+
+
+function eraseGrid(){
+    grid.forEach(block => {
+        block.addEventListener("mouseover", () => {
+            block.style.backgroundColor = 'white';
+            
+        });
+        
+    });
+}
+

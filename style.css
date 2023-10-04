@@ -1,7 +1,7 @@
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
-	--text: #333333;
+	--text: #000000;
 	--background: #efefef;
 	--primary: #70a3fa;
 	--secondary: #166dff;
@@ -16,7 +16,7 @@
     display: grid;
     background-color:#fefefe;
     margin: 20px 150px 0px 150px;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
   p{
 	margin: 0; display: flex; justify-content: center; font-weight: 600;
@@ -26,8 +26,8 @@
 	font-family: 'Barlow';
 	border: none; text-align: center; padding: 5px 10px;
     color: #fefefe; font-size: 30px;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 	border-radius: 4px;
+  transition: background-color 0.25s ease-in;
   }
   
   #buttonContainer{
@@ -47,10 +47,8 @@
   }
   #color::-webkit-color-swatch {
 	border-radius: 50%;
-	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   }
   #color::-moz-color-swatch {
 	border-radius: 50%;
-	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   }
 
